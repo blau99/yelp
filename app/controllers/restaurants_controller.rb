@@ -24,7 +24,6 @@ class RestaurantsController < ApplicationController
 
     @restaurant.name = params[:name]
     @restaurant.tag = params[:tag]
-    @restaurant.reviews = params[:reviews]
     @restaurant.address = params[:address]
     @restaurant.description = params[:description]
     @restaurant.website = params[:website]
@@ -57,7 +56,6 @@ class RestaurantsController < ApplicationController
 
     @restaurant.name = params[:name]
     @restaurant.tag = params[:tag]
-    @restaurant.reviews = params[:reviews]
     @restaurant.address = params[:address]
     @restaurant.description = params[:description]
     @restaurant.website = params[:website]
