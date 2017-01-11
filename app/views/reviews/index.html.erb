@@ -21,11 +21,6 @@
 </div>
 
 <div class="form-group">
-    <%= f.label :photos_cont, "Photos contains" %>
-    <%= f.text_field :photos_cont, :class => "form-control", :placeholder => "Photos contains" %>
-  </div>
-
-<div class="form-group">
     <%= f.label :content_cont, "Content contains" %>
     <%= f.text_field :content_cont, :class => "form-control", :placeholder => "Content contains" %>
   </div>
@@ -154,7 +149,7 @@
           <% end %>
         </td>
         <td><%= review.content %></td>
-        <td><%= review.photos %></td>
+        <td><img src='<%= review.photos %>' class='img-responsive'></td>
         <td><%= review.rating %></td>
         <td>
           <a href="/reviews/<%= review.id %>" class="btn btn-primary">Show</a>

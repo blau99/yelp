@@ -21,7 +21,7 @@
       <dd><%= @restaurant.website %></dd>
 
       <dt>Cover photo</dt>
-      <dd><%= @restaurant.cover_photo %></dd>
+      <dd><img src="<%= @restaurant.cover_photo %>" class="img-responsive"></dd>
 
     </dl>
 
@@ -68,7 +68,7 @@
       <% end %>
 
       <li class="list-group-item">
-        <form action="/create_review" method="post">
+        <form action="/create_review" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -93,7 +93,7 @@
           Photos
         </label>
 
-        <input type="text" id="photos" name="photos" placeholder="Photos" class="form-control" value="">
+        <input type="file" id="photos" name="photos" class="form-control">
       </div>
 
       <!-- Label and input for rating -->
